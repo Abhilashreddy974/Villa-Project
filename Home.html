@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   
+
+  <style>
+    body{
+    background-color: rgb(248, 243, 243);
+    }
+    .navbar-nav{
+      height: 60px;
+    }
+    .nav-item{
+      font-size: 25px;
+      padding-right: 19px;
+      gap: 20px;
+     
+    }
+    .nav1{
+      font-size: 23px;
+      color: orangered;
+      margin-left: 10px;
+      background-color: black;
+      padding: 12px;
+      border-radius: 25px;
+      text-decoration: none;
+
+    }
+        
+  /* calender */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: black;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 16px 8px 40px;
+  font-weight: 500;
+  font-size: 17px;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 7PX;
+}
+
+.cta .fa {
+  background: rgb(225, 67, 10);
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 16px;
+  position: absolute;
+  left: -1px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+/* Hover effect */
+.cta:hover {
+  background: #f44b03; 
+  transform: translateY(-2px);
+}
+
+.cta:hover .fa {
+  background: #060606; 
+  transform: scale(1.1); 
+}
+    .carousel-inner img {
+      height: 750px;
+      object-fit:fill ;
+
+
+
+    }
+    .carousel-caption {
+     position: absolute;
+    top: 40%;
+     left: 15%;
+    transform: translateY(-50%);
+    color: white;
+     text-align: left;
+}
+
+.carousel-caption .location {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  padding: 5px 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption h1 {
+  font-size: 68px;
+  font-weight: bold;
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
+   section{
+      margin-bottom: 120px;
+      margin-top: 170px;
+
+    }
+     section h2{
+      font-size: 40px;
+      font-weight: bold;
+      color: #080808;
+      margin-top: px;
+    }
+    
+    /* Small floating icon on image */
+    .image-icon {
+      position: absolute;
+      bottom: -35px;
+      left: -30px;
+      background-color: orangered;
+      border-radius: 50%;
+      padding: 15px;
+    }
+    
+    /* Useful links box */
+    .links-box {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+    .links-box h6 {
+      color: #ff4d00;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .links-box a {
+      text-decoration: none;
+    }
+
+    
+    /* Right info card */
+    .info-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 3px 8px rgba(23, 1, 1, 0.05);
+      width: 280px;
+    }
+    .home-2-img-icon {
+      height: 55px;
+      padding: 5px;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      height: 105px;
+      padding: 15px 0;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .info-item:last-child {
+      border-bottom: none;
+    }
+    .info-title {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .info-sub {
+      color: gray;
+      font-size: 10px;
+    }
+   .bg-video {
+      background: url('../images/video-bg.jpg') center/cover no-repeat;
+      position: relative;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; 
+      align-items: center;
+      text-align: center;
+      padding-top: 100px; 
+    }
+    .bg-video::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+    
+    .bg-video .content {
+      position: relative;
+      z-index: 1;
+    }
+    /* Play button */
+    .play-btn {
+  background-color: rgba(255, 68, 0, 0.9); 
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-btn .triangle {
+  width: 0;
+  height: 0;
+  border-left: 18px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 5px;
+}
+ :root{
+      --accent: #f15a24; /* orange accent */
+      --muted: #7a7a7a;
+      --card-bg: #ffffff;
+      --soft-gray: #f6f6f6;
+    }
+    body{
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #fff;
+      color: #222;
+    }
+
+    /* Container spacing */
+    .section-wrap{
+      padding: 60px 0;
+    }
+
+    /* Small label */
+    .small-label{
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.6px;
+    }
+
+    h1.hero-title{
+      font-size: 36px;
+      line-height: 1.05;
+      font-weight: 800;
+      margin-top: 10px;
+      margin-bottom: 24px;
+    }
+
+    /* Filter buttons top-right */
+    .filters {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:flex-end;
+      margin-top: 80px;
+    }
+    .filters .btn {
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-weight:600;
+      box-shadow: none;
+    }
+    .filters .btn--accent{
+      background: var(--accent);
+      color: #fff;
+      border: none;
+    }
+    .filters .btn--dark{
+      background: #111;
+      color: #fff;
+      border: none;
+    }
+
+    /* Left details card */
+    .flat-box{
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 6px 18px rgba(28,28,28,0.06);
+      max-width: 260px;
+      height: 450px;
+    }
+    .flat-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 10px 6px;
+      border-radius: 8px;
+    }
+    .flat-row + .flat-row{
+      margin-top: 8px;
+    }
+    .flat-label{
+      color: #b7b7b7;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .flat-value{
+      color: #222;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    /* center image */
+    .house-pic {
+      object-fit: cover;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+      display:block;
+    }
+    /* Right text column & CTA */
+    .extra-info {
+      max-width: 320px;
+    }
+    .extra-info h5 {
+      font-size: 19px;
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+    .extra-info p {
+      color: #6b6b6b;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: black;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 22px 12px 55px; 
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.cta .fa {
+  background: orangered;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  position: absolute;
+  left: -1px; 
+}
+
+ .villa-label{
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.6px;
+    }
+
+
+  h1.villa-title{
+      font-size: 36px;
+      line-height: 1.05;
+      font-weight: 800;
+      margin-top: 10px;
+      margin-bottom: 14px;
+    }
+     :root{
+      --brand-orange:#ff5e14;
+      --tag-bg:#ffeae0;
+    }
+    body { font-family: Arial, sans-serif; }
+    .text-orange{ color: var(--brand-orange) !important; }
+    .btn-orange {
+         background-color: var(--brand-orange); 
+        color: #fff; }
+    .property-tag { 
+        background-color: var(--tag-bg); 
+        color: var(--brand-orange);
+         font-size: 14px;
+          display: inline-block;
+           padding: 4px 10px;
+            border-radius: 5px; 
+            margin-bottom: 5px; }
+    .property-price { color: var(--brand-orange); font-size: 18px; font-weight: 700; }
+    .property-card { border: none; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+    /* === Contact section === */
+    
+
+    .contact{
+    height:500px;
+    width: 100%;
+    margin-top: 100px;
+}
+.contact1{
+    margin-top: -400px;
+    text-align: center;
+    color: #ff5f1f;
+    font-weight: 900;
+}
+.contact2{
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.contact-eyebrow{
+  color:#ff4d00;
+  font-weight:900;
+  font-size:.8rem;
+  letter-spacing:.6px;
+  margin-bottom:.5rem;
+}
+.contact-title{
+  color:#fff;
+  font-weight:800;
+  line-height:1.15;
+  font-size: clamp(22px, 2.8vw, 32px);
+  margin-bottom: 28px;
+}
+
+/* map + form */
+.map-embed{
+  width:100%;
+  height:440px;
+  border:0;
+  border-radius:8px;
+  width: 700PX;
+  margin-left: 230px ;
+  margin-top: 60px;
+
+}
+.contact-card{
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  padding:22px;
+  border: 1px solid #eee;
+  width: 500PX;
+  margin-left: 130PX;
+  height: 550px;
+  margin-top: 60px;
+}
+
+.contact-card .form-control,
+.contact-card textarea{
+  border:1px solid #eee;
+  border-radius:10px;
+  background-color: #ececec;
+}
+.contact-card .form-control{ height:46px; }
+.contact-card textarea{ min-height:120px; resize:none; }
+.btn-send{
+  background:#111; color:#fff;
+  border-radius:28px; padding:10px 18px; font-weight:700; border:none;
+}
+
+/* bottom info boxes */
+.contact-info-box{
+  display:flex;
+   align-items:center;
+    gap:24px;
+  background:#f9f7f7; border-radius:14px; border:1px solid #eee;
+  box-shadow:0 8px 24px rgba(255, 252, 252, 0.06);
+  padding:20px;
+   height:100px;
+   width: 350px;
+   justify-content: left;
+   margin-top: -100px;
+   margin-left: 50px;
+}
+
+.contact-info-box h6{ margin:0; font-weight:700; }
+.contact-info-box small{ color:#8b8b8b; }
+
+
+
+
+  
+   
+
+
+  </style>
+</head>
+<body>
+
+  
+<div class="bg-light py-1 small">
+  <div class="container d-flex justify-content-between">
+    <div>
+      <i class="fa-solid fa-envelope text-danger me-2"></i> info@villa.co
+      <i class="fa-solid fa-location-dot text-danger ms-4 me-2"></i> Sunny Isles Beach, FL 33160
+    </div>
+    <div>
+      <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-dark me-3"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<hr style="margin: 0;">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">VILLA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active text-orange" href="./Home.html" >Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./property.html" >Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="./property-details.html">Property Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Contactus.html">Contact Us</a></li> 
+         <li class="nav-item ms-lg-3">
+          <a class="cta" href="#">
+            <span class="fa fa-calendar"></span>
+            Schedule a visit
+          </a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../images/banner-01.jpg" class="d-block w-100" alt="...">
+
+       <div class="carousel-caption ">
+    <span class="location"><strong style="color: black;">Toronto,</strong><strong style="color: #d9534f;">Canada</strong></span>
+    <h1>HURRY!<br>GET THE BEST<br>VILLA FOR YOU</h1>
+
+     </div>
+
+    </div>
+    <div class="carousel-item">
+      <img src="../images/banner-02.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../images/banner-03.jpg" class="d-block w-100" alt="...">
+    </div>
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+   </button>
+</div>
+
+
+<!-- Featured Property -->
+<div class="container py-5" style="margin-top: 150px;">
+  <div class="row align-items-start">
+
+    <!-- Left image -->
+    <div class="col-md-4 position-relative">
+      <img src="../images/featured.jpg" alt="Apartment" class="property-img">
+      <div class="image-icon">
+        <img src="../images/featured-icon.png" alt="">
+      </div>
+    </div>
+
+    <!-- Middle text -->
+    <div class="col-md-5">
+      <p class="text-danger fw-bold mb-1">| FEATURED</p>
+      <h2 class="fw-bold">Best Apartment<br>& Sea View</h2>
+
+      <div class="links-box">
+        <h6>Best useful links ?</h6>
+        <hr>
+        <p>
+          Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business.
+          XYZ provides you the best service in the world. Please tell your friends about it.
+        </p>
+
+        <!-- Accordion starts here -->
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How does this work?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                This section explains the process of how our villa services operate step-by-step.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Why is Villa Agency the best?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                We provide unmatched quality, best locations, and customer-focused services.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion ends here -->
+      </div>
+    </div>
+
+    <!-- Right info card -->
+ 
+
+    <div class="col-md-3" >
+      <div class="info-card">
+        <div class="info-item">
+          <img class="home-2-img-icon" src="../images/info-icon-01.png" alt="">
+          <div>
+            <div class="info-title">250 m²</div>
+            <div class="info-sub">Total Flat Space</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <img class="home-2-img-icon" src="../images/info-icon-02.png" alt="">
+          <div>
+            <div class="info-title">Contract</div>
+            <div class="info-sub">Contract Ready</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <img class="home-2-img-icon" src="../images/info-icon-03.png" alt="">
+          <div>
+            <div class="info-title">Payment</div>
+            <div class="info-sub">Payment Process</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <img class="home-2-img-icon" src="../images/info-icon-04.png" alt="">
+          <div>
+            <div class="info-title">Safety</div>
+            <div class="info-sub">24/7 Under Control</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Video Section -->
+<!-- Background Section with Text Shifted Up -->
+<section class="bg-video text-white">
+  <div class="content">
+    <p class="text-uppercase fw-semibold mb-3" style="color: #ff5722; font-size: 13px; letter-spacing: 1px;">
+      | Video View
+    </p>
+    <h2 style="font-size: 40px; color: #f1f1f1;" class="fw-bold mb-0">Get Closer View &<br>Different Feeling</h2>
+  </div>
+</section>
+
+<!-- Video Frame (Pulled Up) -->
+<div class="container position-relative" style="margin-top: -320px; margin-bottom: 100px;">
+  <div class="bg-white rounded shadow overflow-hidden mx-auto" style="max-width: 900px;">
+    <div class="position-relative">
+      <img src="../images/video-frame.jpg" class="img-fluid" alt="Video Thumbnail">
+      <button class="play-btn position-absolute top-50 start-50 translate-middle">
+        <span class="triangle"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Section -->
+<div class="container my-5">
+  <div class="row g-5 justify-content-center">
+    
+    <div class="col-6 col-md-3">
+      <div class="rounded position-relative d-flex justify-content-center align-items-center px-4" 
+           style="background-color: #ffe5db; height: 100px;">
+        <span class="rounded-circle position-absolute top-0 start-100 translate-middle" 
+              style="width: 50px; height: 50px; background-color: orangered;"></span>
+        <div class="d-flex align-items-center">
+          <div class="fs-2 fw-bolder me-4" style="color: orangered;">34</div>
+          <div class="fw-semibold text-start">
+            Buildings<br>Finished Now
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="rounded position-relative d-flex justify-content-center align-items-center px-4" 
+           style="background-color: #ffe5db; height: 100px;">
+        <span class="rounded-circle position-absolute top-0 start-100 translate-middle" 
+              style="width: 50px; height: 50px; background-color: orangered;"></span>
+        <div class="d-flex align-items-center">
+          <div class="fs-2 fw-bolder me-4" style="color: orangered;">12</div>
+          <div class="fw-semibold text-start">
+            Years<br>Experience
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="rounded position-relative d-flex justify-content-center align-items-center px-4" 
+           style="background-color: #ffe5db; height: 100px;">
+        <span class="rounded-circle position-absolute top-0 start-100 translate-middle" 
+              style="width: 50px; height: 50px; background-color: orangered;"></span>
+        <div class="d-flex align-items-center">
+          <div class="fs-2 fw-bolder me-4" style="color: orangered;">24</div>
+          <div class="fw-semibold text-start">
+            Awards<br>Won 2023
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Best deals -->
+
+  <div class="container section-wrap">
+    <div class="row align-items-center mb-4">
+      <div class="col-lg-7">
+        <div class="small-label">| BEST DEAL</div>
+        <h1 class="hero-title">Find Your Best Deal<br>Right Now!</h1>
+      </div>
+      <div class="col-lg-5">
+        <div class="filters">
+          <button class="btn btn--accent">Appartment</button>
+          <button class="btn btn--dark">Villa House</button>
+          <button class="btn btn--dark">Penthouse</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row gy-4 align-items-center" >
+      <!-- Left details card -->
+      <div class="col-md-3 d-flex justify-content-center justify-content-md-start">
+  <div class="flat-box">
+    <div class="flat-row" >
+      <div class="flat-label">Total Flat Space</div>
+      <div class="flat-value">185 m2</div>
+    </div>
+    <hr>
+
+    <div class="flat-row">
+      <div class="flat-label">Floor number</div>
+      <div class="flat-value">26th</div>
+    </div>
+    <hr>
+
+    <div class="flat-row" >
+      <div class="flat-label">Number of rooms</div>
+      <div class="flat-value">4</div>
+    </div>
+    <hr>
+
+    <div class="flat-row">
+      <div class="flat-label">Parking Available</div>
+      <div class="flat-value">Yes</div>
+    </div>
+    <hr >
+
+    <div class="flat-row" >
+      <div class="flat-label">Payment Process</div>
+      <div class="flat-value">Bank</div>
+    </div>
+  </div>
+</div>
+
+      <!-- Center image -->
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="../images/deal-01.jpg" alt="Property" class="house-pic">
+      </div>
+
+
+
+      <!-- Right text and CTA -->
+      <div class="col-md-3 d-flex justify-content-center justify-content-md-end">
+        <div class="extra-info">
+          <h5>Extra Info About Property</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
+          </p>
+
+          <p style="color:#6b6b6b; margin-bottom:20px;">
+            When you need best websites, you can simply type XYZ in any search engine website. In addition, you can type XYZ Portfolio, XYZ One Page Layouts, etc.
+          </p>
+
+          <a class="cta" href="#">
+            <span class="fa fa-calendar"></span>
+            Schedule a visit
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Properties Provide -->
+  <section>
+   <div class="row align-items-center mb-4" >
+      <div class="col-lg-7" style="align-items: center; margin-left: 650px; margin-top: 20px;">
+        <div class="villa-label">| PROPERTIES</div>
+        <h1 class="villa-title">We Provide The Best<br>Property You Like</h1>
+
+      </div>
+    </section>
+      <!-- Properties Grid -->
+<div class="container">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-01.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$2.264.000</h5>
+          <p class="fw-bold mb-1">18 Old Street Miami, OR 97219</p>
+          <p class="text-muted small mb-0">Bedrooms: 8 Bathrooms: 8 Area: 545m2 Floor: 3 Parking: 6 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-02.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.180.000</h5>
+          <p class="fw-bold mb-1">54 New Street Florida, OR 27001</p>
+          <p class="text-muted small mb-0">Bedrooms: 6 Bathrooms: 5 Area: 450m2 Floor: 3 Parking: 8 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-03.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.460.000</h5>
+          <p class="fw-bold mb-1">26 Mid Street Portland, OR 38540</p>
+          <p class="text-muted small mb-0">Bedrooms: 6 Bathrooms: 4 Area: 225m2 Floor: 3 Parking: 10 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-04.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.250.000</h5>
+          <p class="fw-bold mb-1">12 Hope Street Portland, OR 12650</p>
+          <p class="text-muted small mb-0">Bedrooms: 5 Bathrooms: 4 Area: 125m2 Floor: 2 Parking: 4 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-05.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$980.000</h5>
+          <p class="fw-bold mb-1">34 Hope Street Miami, OR 24650</p>
+          <p class="text-muted small mb-0">Bedrooms: 4 Bathrooms: 3 Area: 125m2 Floor: 2 Parking: 3 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-06.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.520.000</h5>
+          <p class="fw-bold mb-1">22 Hope Street Miami, OR 22650</p>
+          <p class="text-muted small mb-0">Bedrooms: 6 Bathrooms: 5 Area: 450m2 Floor: 3 Parking: 6 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section  -->
+<section class="contact-band" id="contact">
+   <img class="contact" src="../images/contact-bg.jpg" alt="Contact pg">
+      </div>
+      <div class="contact1">
+        <span>| CONTACT US</span>
+      </div>
+      <div class="contact2">
+        <span>Get In Touch With</span><br>
+        <span>Our Agents</span>
+      </div>
+    <div class="row align-items-start g-4">
+      <!-- Left: Map -->
+      <div class="col-lg-6">
+        <iframe class="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d124411.00931370878!2d77.59186515048827!3d12.981825141407533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1755446830509!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="col-lg-6">
+        <form class="contact-card">
+          <!-- Full Name -->
+          <div >Full Name</div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name..">
+          </div>
+
+          <!-- Email -->
+          <div class=>Email Address</div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your E-mail..">
+          </div>
+
+          <!-- Subject -->
+          <div class=>Subject</div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Subject..">
+          </div>
+
+          <!-- Message -->
+          <div class=>Message</div>
+          <div class="mb-3">
+            <textarea class="form-control" placeholder="Your Message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-send">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom contact cards -->
+    <div class="row mt-4 g-4" >
+      <div class="col-md-4">
+        <div class="contact-info-box">
+          <img src="../images/phone-icon.png" alt="Phone Icon" class="img-fluid">
+          <div>
+            <h6 class="mb-0">010-020-0340</h6>
+            <small>Phone Number</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="contact-info-box" style="justify-content: left;">
+          <img src="../images/email-icon.png" alt="Email Icon" class="img-fluid">
+          <div>
+            <h6 class="mb-0">info@villa.co</h6>
+            <small>Business Email</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+  <footer class="bg-dark text-white text-center justify-content-center py-3 mt-5" style="height: 70px; ">
+  <small>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design:M.abhilash Reddy </small>
+</footer>
+</body>
+</html>

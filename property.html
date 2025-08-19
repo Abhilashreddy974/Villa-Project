@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Properties - Villa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+     .navbar-nav{
+      height: 60px;
+    }
+    .nav-item{
+      font-size: 25px;
+      padding-right: 19px;
+     
+    }
+    .nav1{
+      font-size: 23px;
+      color: orangered;
+      margin-left: 10px;
+      background-color: black;
+      padding: 12px;
+      border-radius: 25px;
+      text-decoration: none;
+
+    }
+        
+  /* calender */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: black;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 16px 8px 40px;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 7PX;
+}
+
+.cta .fa {
+  background: rgb(225, 67, 10);
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 16px;
+  position: absolute;
+  left: -1px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+/* Hover effect */
+.cta:hover {
+  background: #f44b03; 
+  transform: translateY(-2px);
+}
+
+.cta:hover .fa {
+  background: #060606; 
+  transform: scale(1.1); 
+}
+    :root{
+      --brand-orange:#ff5e14;
+      --tag-bg:#ffeae0;
+    }
+    body { font-family: Arial, sans-serif; }
+    .text-orange{ color: var(--brand-orange) !important; }
+    .btn-orange {
+         background-color: var(--brand-orange); 
+        color: #fff; }
+    .property-tag { 
+        background-color: var(--tag-bg); 
+        color: var(--brand-orange);
+         font-size: 14px;
+          display: inline-block;
+           padding: 4px 10px;
+            border-radius: 5px; 
+            margin-bottom: 5px; }
+    .property-price { color: var(--brand-orange); font-size: 18px; font-weight: 700; }
+    .property-card { border: none; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+    .hero { background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAAEyCAYAAABe1Lz5AA...REDACTED_FOR_BREVITY...'); background-position:center; background-size:cover; padding: 80px 0; color: white; text-align: center; }
+     .pagination .page-link {
+      background-color: black;
+      color: white;
+      border: none;
+    }
+    .pagination .page-link:hover {
+      background-color: #ff4f00;
+      color: white;
+    }
+    .pagination .active .page-link {
+      background-color: #ff4f00 !important;
+      color: white !important;
+      border: none;
+
+    
+    }
+    .page-link{ color:#000; }
+
+  </style>
+</head>
+<body>
+
+<div class="bg-light py-1 small" style="margin-top: 0;">
+  <div class="container d-flex justify-content-between">
+    <div>
+      <i class="fa-solid fa-envelope text-danger me-2"></i> info@villa.co
+      <i class="fa-solid fa-location-dot text-danger ms-4 me-2"></i> Sunny Isles Beach, FL 33160
+    </div>
+    <div>
+      <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-dark me-3"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<hr style="margin: 0;">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">VILLA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="./Home.html" >Home</a></li>
+        <li class="nav-item"><a class="nav-link active text-orange" href="#" >Properties</a></li>
+        <li class="nav-item"><a class="nav-link" href="./property-details.html">Property Details</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li> 
+         <li class="nav-item ms-lg-3">
+          <a class="cta" href="#">
+            <span class="fa fa-calendar"></span>
+            Schedule a visit
+          </a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!--Header -->
+
+<div class="text-white text-center py-5" style="background-image: url(../images/page-heading-bg.jpg); height: 300px;">
+  <div class="bg-white bg-opacity-50 d-inline-block px-3 py-1 small">HOME / PROPERTIES</div>
+  <h1 class="fw-bold mt-2">PROPERTIES</h1>
+</div>
+
+<!-- Filter Buttons -->
+<div class="container text-center my-4">
+  <button class="btn btn-orange" >Show All</button>
+  <button class="btn btn-dark">Apartment</button>
+  <button class="btn btn-dark">Villa House</button>
+  <button class="btn btn-dark">Penthouse</button>
+</div>
+
+<!-- Properties Grid -->
+<div class="container">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-01.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$2.264.000</h5>
+          <p class="fw-bold mb-1">18 Old Street Miami, OR 97219</p>
+          <p class="text-muted small mb-0">Bedrooms: 8 Bathrooms: 8 Area: 545m2 Floor: 3 Parking: 6 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-02.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.180.000</h5>
+          <p class="fw-bold mb-1">54 New Street Florida, OR 27001</p>
+          <p class="text-muted small mb-0">Bedrooms: 6 Bathrooms: 5 Area: 450m2 Floor: 3 Parking: 8 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-03.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.460.000</h5>
+          <p class="fw-bold mb-1">26 Mid Street Portland, OR 38540</p>
+          <p class="text-muted small mb-0">Bedrooms: 6 Bathrooms: 4 Area: 225m2 Floor: 3 Parking: 10 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-04.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.250.000</h5>
+          <p class="fw-bold mb-1">12 Hope Street Portland, OR 12650</p>
+          <p class="text-muted small mb-0">Bedrooms: 5 Bathrooms: 4 Area: 125m2 Floor: 2 Parking: 4 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-05.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$980.000</h5>
+          <p class="fw-bold mb-1">34 Hope Street Miami, OR 24650</p>
+          <p class="text-muted small mb-0">Bedrooms: 4 Bathrooms: 3 Area: 125m2 Floor: 2 Parking: 3 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-06.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.520.000</h5>
+          <p class="fw-bold mb-1">22 Hope Street Miami, OR 22650</p>
+          <p class="text-muted small mb-0">Bedrooms: 6 Bathrooms: 5 Area: 450m2 Floor: 3 Parking: 6 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-03.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$3.145.000</h5>
+          <p class="fw-bold mb-1">14 Mid Street Miami, OR 24650</p>
+          <p class="text-muted small mb-0">Bedrooms: 8 Bathrooms: 8 Area: 545m2 Floor: 3 Parking: 6 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-02.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$860.000</h5>
+          <p class="fw-bold mb-1">18 New Street Portland, OR 12650</p>
+          <p class="text-muted small mb-0">Bedrooms: 4 Bathrooms: 3 Area: 125m2 Floor: 2 Parking: 3 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card property-card h-100">
+        <img src="../images/property-01.jpg" class="card-img-top" alt="Luxury Villa">
+        <div class="card-body">
+          <span class="property-tag">Luxury Villa</span>
+          <h5 class="property-price">$1.950.000</h5>
+          <p class="fw-bold mb-1">12 Old Street Portland, OR 24650</p>
+          <p class="text-muted small mb-0">Bedrooms: 5 Bathrooms: 4 Area: 225m2 Floor: 3 Parking: 4 spots</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <a href="#" class="btn btn-dark w-100">Schedule a visit</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+ <!-- Pagination -->
+  <nav aria-label="Page navigation" class="mt-5">
+    <ul class="pagination justify-content-center gap-2">
+      <li class="page-item"><a class="page-link rounded-circle d-flex align-items-center justify-content-center" style="width:42px;height:42px;" href="#">1</a></li>
+      <li class="page-item active"><a class="page-link rounded-circle d-flex align-items-center justify-content-center" style="width:42px;height:42px;" href="#">2</a></li>
+      <li class="page-item"><a class="page-link rounded-circle d-flex align-items-center justify-content-center" style="width:42px;height:42px;" href="#">3</a></li>
+      <li class="page-item"><a class="page-link rounded-circle d-flex align-items-center justify-content-center" style="width:42px;height:42px;" href="#">›</a></li>
+      <li class="page-item"><a class="page-link rounded-circle d-flex align-items-center justify-content-center" style="width:42px;height:42px;" href="#">»</a></li>
+    </ul>
+  </nav>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design: M.Abhilash Reddy</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
